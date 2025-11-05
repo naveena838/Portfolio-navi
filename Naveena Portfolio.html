@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveena | Cybersecurity Student</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      position: relative;
+      overflow-x: hidden;
+      background: #000;
+      min-height: 100vh;
+    }
+
+    /* Matrix Background Canvas */
+    #matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: black;
+    }
+
+    /* --- Header --- */
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      font-family: "Rajdhani", sans-serif;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    /* --- Navigation Bar --- */
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+    nav a:hover {
+      background: #f72585;
+      border-radius: 5px;
+    }
+
+    /* --- Section --- */
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+    }
+    section h2 {
+      color: #f72585;
+      font-size: 1.9rem;
+      font-family: "Rajdhani", sans-serif;
+      margin-bottom: 20px;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    section h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background-color: #3a0ca3;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      border-radius: 5px;
+    }
+    section p {
+      line-height: 1.7;
+      color: #eee;
+    }
+
+    /* --- Skills & Projects (Glass Effect) --- */
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .skill-box, .project-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      flex: 1 1 220px;
+      text-align: center;
+      color: #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skill-box:hover, .project-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    }
+
+    /* --- Contact Section --- */
+    #contact a {
+      color: #00ffcc;
+      text-decoration: none;
+      word-break: break-all;
+      font-weight: 500;
+    }
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: rgba(0,0,0,0.9);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    /* --- Scroll Animation --- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.3rem; }
+      section { padding: 30px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Matrix Background -->
+  <canvas id="matrix-bg"></canvas>
+
+  <header>
+    <h1>Naveena</h1>
+    <p>Cybersecurity Student | Mahendra Engineering College</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>Hi! I'm <strong>Naveena</strong>, a passionate B.E. Cybersecurity student at Mahendra Engineering College. I’m deeply interested in ethical hacking, network defense, and digital forensics. I aim to build a career where I can contribute to a safer digital world.</p>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-box">Python</div>
+      <div class="skill-box">HTML & CSS</div>
+      <div class="skill-box">Cybersecurity Basics</div>
+      <div class="skill-box">Network Security</div>
+      <div class="skill-box">Poster Design</div>
+    </div>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-box">
+        <h3>Network Security Demo</h3>
+        <p>A mini project demonstrating basic network attack prevention techniques using packet sniffing and monitoring tools.</p>
+      </div>
+      <div class="project-box">
+        <h3>Password Strength Checker</h3>
+        <p>A simple Python program that evaluates and scores the strength of user-created passwords.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="fade-in">
+    <h2>Education</h2>
+    <p><strong>B.E. Cybersecurity</strong><br>Mahendra Engineering College<br>Expected Graduation: 2028</p>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:naveena5052@gmail.com">naveena5052@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/naveena-n-b9b327342?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/naveena-n</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Naveena. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Matrix Background Effect - Full Visible
+    const canvas = document.getElementById("matrix-bg");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00ffcc";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
+          drops[i] = 0;
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+
+    window.addEventListener("resize", () => {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    });
+
+    // Scroll Animation
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          appearOnScroll.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeEls.forEach(el => appearOnScroll.observe(el));
+  </script>
+
+</body>
+</html>
